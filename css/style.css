@@ -41,6 +41,19 @@ utility
     display: flex;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
 /*
 ************
 common
@@ -50,6 +63,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*
 ************
 header
@@ -57,6 +74,35 @@ header
 */
 header {
     background-color: var(--first-color);
+    height: 4.6875rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    color: white;
+}
+
+header .main-nav {
+    display: none;
+}
+
+header .main-nav ul li > a:not(.main-nav ul li:last-child > a) {
+    padding: 0 .3125rem;
+    color: white;
+}
+
+header .main-nav ul li:last-child > a {
+    padding: .625rem .9375rem;
+    margin-left: .3125rem;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    header .main-nav {
+        display: block;
+    }
 }
 
 /*
