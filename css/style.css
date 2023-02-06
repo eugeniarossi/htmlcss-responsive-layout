@@ -40,6 +40,8 @@ utility
     width: 100%;
     padding-left: 1.875rem;
     padding-right: 1.875rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flex {
@@ -72,6 +74,10 @@ utility
     text-align: center;
 }
 
+.btn {
+    border-radius: 1.875rem;
+}
+
 .col {
     width: 100%;
     border-radius: .9375rem;
@@ -99,6 +105,10 @@ utility
 common
 ************
 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 ul {
     list-style: none;
 }
@@ -115,7 +125,7 @@ img {
 
 h2 {
     text-align: center;
-    margin: 50px 0;
+    margin: .625rem 0 3.125rem;
 }
 
 /*
@@ -138,7 +148,7 @@ header .main-nav {
 }
 
 header .main-nav ul li > a:not(.main-nav ul li:last-child > a) {
-    padding: 0 .3125rem;
+    padding: 0 .9375rem;
     color: white;
 }
 
@@ -280,9 +290,12 @@ main #about-us .small-box .profile-img > div {
     height: 11.25rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
     main #about-us .container {
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
         display: flex;
+        gap: 7.1875rem;
     }
 }
 
@@ -291,10 +304,6 @@ main #about-us .small-box .profile-img > div {
     main #pre-footer .container,
     footer .container {
         max-width: 35.625rem;
-    }
-
-    main #about-us {
-        padding: 0 2.8125rem;
     }
 }
 /*
