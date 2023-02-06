@@ -26,7 +26,6 @@ variables
 debug
 ************
 */
-.debug main #info .row .col,
 .debug main #benefits .row .col {
     height: 200px;
 }
@@ -107,6 +106,7 @@ common
 */
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5625rem;
 }
 
 ul {
@@ -126,6 +126,10 @@ img {
 h2 {
     text-align: center;
     margin: .625rem 0 3.125rem;
+}
+
+main #info .row .col p {
+    margin: 35px 0;
 }
 
 /*
@@ -188,13 +192,37 @@ section:nth-of-type(even) {
 }
 
 /*info*/
-main #info .col {
+main #info .row {
     margin: -0.75rem;
+    color: #5a6e7f;
+}
+
+main #info h4 {
+    color: var(--first-color);
 }
 
 main #info .row .col {
     background-color: var(--first-color-light);
     margin: .75rem;
+    padding: 2.5rem 1.5625rem;
+}
+
+main #info .row .col:not(#info .row .col:first-child) {
+    text-align: center;
+}
+
+main #info .row .col:first-child {
+    padding-bottom: 0;
+}
+
+main #info .row .col:first-child .content a {
+    background-color: var(--first-color);
+    padding: .625rem 3.125rem;
+    color: white;
+}
+
+main #info .row .col:first-child .img {
+    padding-top: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -205,11 +233,16 @@ main #info .row .col {
     main #info .row .col:first-child {
         width: calc(2 * (100% / 3) - 1.5rem);
     }
+    
+    main #info .row .col:first-child > div {
+        width: calc(100% / 2 - 1.5rem);
+    }
 }
 
 @media screen and (min-width: 992px) {
     main #info .row .col:first-child {
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 
