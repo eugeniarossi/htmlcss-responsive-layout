@@ -92,6 +92,10 @@ utility
     background-color: green;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: 992px) {
     .container {
         max-width: 71.25rem;
@@ -125,7 +129,7 @@ img {
 
 h2 {
     text-align: center;
-    margin: .625rem 0 3.125rem;
+    margin: 2.8125rem 0;
 }
 
 h3 {
@@ -189,6 +193,14 @@ section {
 
 section:nth-of-type(even) {
     background-color: var(--secondary-color);
+}
+
+section:nth-of-type(even) h2 {
+    color: white;
+}
+
+section:nth-of-type(odd) h2 {
+    color: var(--secondary-color);
 }
 
 /*info*/
@@ -255,6 +267,10 @@ main #planning .row {
     align-items: flex-end;
 }
 
+main #planning .row .col-1 {
+    color: white;
+}
+
 main #planning .row .col-1 > img {
     margin-bottom: 8.125rem;
 }
@@ -267,6 +283,7 @@ main #planning .row .col-2 {
     background-color: white;
     padding: 2.1875rem 2.5rem;
     text-align: center;
+    margin-top: 2.1875rem;
 }
 
 main #planning .row .col-2 > div:last-child {
@@ -288,11 +305,20 @@ main #planning .row .col-2 > div:last-child {
 }
 
 /*testimonials*/
+main #testimonials .container div:first-child p {
+    margin-bottom: 3.125rem;
+}
+
 main #testimonials .card {
     background-color: var(--secondary-color);
     margin: 1.875rem 0;
     padding: 1.875rem 1.25rem 2.5rem;
     text-align: center;
+    color: white;
+}
+
+main #testimonials .card p {
+    margin-bottom: 2.1875rem;
 }
 
 main #testimonials .card .profile-img > div {
@@ -340,6 +366,14 @@ main #benefits .row .col {
 }
 
 /*about us*/
+main #about-us .small-box {
+    margin-top: 1.875rem;
+}
+
+main #about-us .small-box {
+    margin-top: 1.875rem;
+}
+
 main #about-us .small-box .profile-img > div {
     width: 11.25rem;
     height: 11.25rem;
@@ -361,6 +395,7 @@ main #about-us .small-box .profile-img > div {
         max-width: 35.625rem;
     }
 }
+
 /*
 ************
 footer
