@@ -82,6 +82,11 @@ utility
     border-radius: 3.125rem;
 }
 
+.profile-img > div {
+    border-radius: 50%;
+    background-color: green;
+}
+
 @media screen and (min-width: 992px) {
     .container {
         max-width: 71.25rem;
@@ -226,10 +231,8 @@ main #testimonials .card {
 }
 
 main #testimonials .card .profile-img > div {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: green;
+    width: 12.5rem;
+    height: 12.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -272,12 +275,26 @@ main #benefits .row .col {
 }
 
 /*about us*/
+main #about-us .small-box .profile-img > div {
+    width: 11.25rem;
+    height: 11.25rem;
+}
+
+@media screen and (min-width: 992px) {
+    main #about-us .container {
+        display: flex;
+    }
+}
 
 /*pre-footer*/
 @media screen and (min-width: 768px) {
     main #pre-footer .container,
     footer .container {
         max-width: 35.625rem;
+    }
+
+    main #about-us {
+        padding: 0 2.8125rem;
     }
 }
 /*
