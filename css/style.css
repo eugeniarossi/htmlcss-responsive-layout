@@ -26,7 +26,8 @@ variables
 debug
 ************
 */
-.debug main #info .row .col {
+.debug main #info .row .col,
+.debug main #benefits .row .col {
     height: 200px;
 }
 
@@ -50,6 +51,11 @@ utility
     flex-wrap: wrap;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -62,9 +68,25 @@ utility
     align-items: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .col {
     width: 100%;
     border-radius: .9375rem;
+}
+
+.card {
+    width: 100%;
+    border-radius: 3.125rem;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 71.25rem;
+        margin: 0 auto;
+    }
 }
 
 /*
@@ -82,13 +104,12 @@ a {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
-@media screen and (min-width: 992px) {
-    .container {
-        max-width: 71.25rem;
-        margin: 0 auto;
-    }
+h2 {
+    text-align: center;
+    margin: 50px 0;
 }
 
 /*
@@ -138,14 +159,20 @@ header .main-nav ul li:last-child > a {
 main
 ************
 */
-
-/*info*/
-main #info {
-    padding-top: 8.4375rem;
-    padding-bottom: 3.75rem;
+main {
+    margin-top: 4.6875rem;
 }
 
-main #info .row {
+section {
+    padding: 3.75rem 0;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--secondary-color);
+}
+
+/*info*/
+main #info .col {
     margin: -0.75rem;
 }
 
@@ -164,12 +191,13 @@ main #info .row .col {
     }
 }
 
-/*planning*/
-main #planning {
-    background-color: var(--secondary-color);
-    padding: 8.125rem 0 3.75rem;
+@media screen and (min-width: 992px) {
+    main #info .row .col:first-child {
+        flex-direction: row;
+    }
 }
 
+/*planning*/
 main #planning .row {
     align-items: flex-end;
 }
@@ -185,6 +213,60 @@ main #planning .row .col-2 {
 
     main #planning .row .col {
         width: calc(50% - 1.875rem);
+    }
+}
+
+/*testimonials*/
+main #testimonials .card {
+    background-color: var(--secondary-color);
+    margin: 1.875rem 0;
+    padding: 1.875rem 1.25rem 2.5rem;
+    text-align: center;
+}
+
+main #testimonials .card .profile-img > div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+@media screen and (min-width: 768px) {
+
+    main #testimonials .card {
+        text-align: left;
+    }
+
+    main #testimonials .card .content {
+        margin-left: 1.875rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    main #testimonials .card {
+        flex-direction: row;
+        padding: 1.875rem 2.5rem 3.125rem .9375rem;
+    }
+
+    main #testimonials .card .content {
+        margin-left: 3.75rem;
+    }
+}
+
+/*benefits*/
+main #benefits .row {
+    margin: -0.9375rem;
+}
+
+main #benefits .row .col {
+    background-color: white;
+    margin: .9375rem;
+}
+
+@media screen and (min-width: 768px) {
+    main #benefits .row .col {
+        width: calc(100% / 3 - 1.875rem);
     }
 }
 
