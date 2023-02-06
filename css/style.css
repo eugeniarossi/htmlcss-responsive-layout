@@ -98,7 +98,8 @@ ul {
     list-style: none;
 }
 
-a {
+header a,
+main a:not(#pre-footer a) {
     text-decoration: none;
 }
 
@@ -270,9 +271,24 @@ main #benefits .row .col {
     }
 }
 
+/*about us*/
+
+/*pre-footer*/
+@media screen and (min-width: 768px) {
+    main #pre-footer .container,
+    footer .container {
+        max-width: 35.625rem;
+    }
+}
 /*
 ************
 footer
 ************
 */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 2.5rem 0 2.5rem;
+}
+
 
