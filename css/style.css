@@ -128,8 +128,8 @@ h2 {
     margin: .625rem 0 3.125rem;
 }
 
-main #info .row .col p {
-    margin: 35px 0;
+h3 {
+    margin-bottom: 3.4375rem;
 }
 
 /*
@@ -225,6 +225,10 @@ main #info .row .col:first-child .img {
     padding-top: 30px;
 }
 
+main #info .row .col p {
+    margin: 2.1875rem 0;
+}
+
 @media screen and (min-width: 768px) {
     main #info .row .col {
         width: calc(100% / 3 - 1.5rem);
@@ -251,8 +255,26 @@ main #planning .row {
     align-items: flex-end;
 }
 
+main #planning .row .col-1 > img {
+    margin-bottom: 8.125rem;
+}
+
+main #planning .row .col-2 p {
+    margin: 1.5625rem 0 2.1875rem;
+}
+
 main #planning .row .col-2 {
     background-color: white;
+    padding: 2.1875rem 2.5rem;
+    text-align: center;
+}
+
+main #planning .row .col-2 > div:last-child {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
