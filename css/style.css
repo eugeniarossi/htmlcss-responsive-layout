@@ -16,7 +16,9 @@ variables
 */
 
 :root {
-    
+    --first-color: #0084fd;
+    --first-color-light: #b5ddff;
+    --secondary-color: #9792e4;
 }
 
 /*
@@ -30,18 +32,32 @@ debug
 utility
 ************
 */
+.container {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+}
+
+.flex {
+    display: flex;
+}
 
 /*
 ************
 common
 ************
 */
+ul {
+    list-style: none;
+}
 
 /*
 ************
 header
 ************
 */
+header {
+    background-color: var(--first-color);
+}
 
 /*
 ************
